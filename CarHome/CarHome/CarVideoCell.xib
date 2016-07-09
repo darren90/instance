@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="CarVideoCell" selectionStyle="default" indentationWidth="10" rowHeight="107" id="KGk-i7-Jjw" customClass="CarVideoCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="107"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="106.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="AJO-NQ-382">
+                        <rect key="frame" x="8" y="14" width="100" height="80"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vmm-id-b7e">
+                                <rect key="frame" x="0.0" y="0.0" width="100" height="80"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="80" id="FXD-YL-jh2"/>
+                            <constraint firstAttribute="width" constant="100" id="hYE-38-rxJ"/>
+                        </constraints>
+                    </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CRF-N6-tC8">
+                        <rect key="frame" x="116" y="53.5" width="186" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="思域运动范" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qe0-ej-M9z">
+                        <rect key="frame" x="116" y="27.5" width="194" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="CRF-N6-tC8" secondAttribute="trailing" constant="10" id="8Qq-a1-hAs"/>
+                    <constraint firstItem="AJO-NQ-382" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="AyE-ef-SMV"/>
+                    <constraint firstItem="Qe0-ej-M9z" firstAttribute="leading" secondItem="AJO-NQ-382" secondAttribute="trailing" constant="8" id="FnX-Db-ePi"/>
+                    <constraint firstAttribute="trailing" secondItem="Qe0-ej-M9z" secondAttribute="trailing" constant="10" id="KDj-ub-rht"/>
+                    <constraint firstItem="CRF-N6-tC8" firstAttribute="top" secondItem="Qe0-ej-M9z" secondAttribute="bottom" constant="7.5" id="Uxv-5U-tG5"/>
+                    <constraint firstItem="Qe0-ej-M9z" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" constant="-16" id="e3Q-9P-6ck"/>
+                    <constraint firstItem="CRF-N6-tC8" firstAttribute="leading" secondItem="Qe0-ej-M9z" secondAttribute="leading" id="sG8-tx-pOe"/>
+                    <constraint firstItem="AJO-NQ-382" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="t3x-Dn-9IG"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="330" y="441.5"/>
+        </tableViewCell>
+    </objects>
+</document>
