@@ -9,8 +9,9 @@
 #import "CarVideosViewController.h"
 #import "CarVideoCell.h"
 
-@interface CarVideosViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface CarVideosViewController ()<UITableViewDelegate,UITableViewDataSource,UIWebViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
 
 
 @property (nonatomic,strong)NSMutableArray * dataArray;
@@ -22,7 +23,44 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://v.autohome.com.cn/v-82408.html"]];
+    self.webView.delegate = self;
+    [self.webView loadRequest:request];
 }
+
+
+-(void)webViewDidFinishLoad:(UIWebView *)webView
+{
+ 
+    
+    //    <html>123</html>
+    //    innerHTML  123
+    //    outerHTML    <html>123</html>
+    
+    //    NSString *str = @"document.getElementsByTagName('html')[0].outerHTML";
+    //    NSString *html = [webView stringByEvaluatingJavaScriptFromString:str];
+    //    NSLog(@"--html:%@",html);
+    
+    NSMutableString *js = [NSMutableString string];
+    
+    [js appendString:@"document.getElementsByClassName(\"application\").remove;"];
+    
+    //删除header
+    [js appendString:@"var headers = document.getElementsByTagName('data-gr-c-s-loaded')"];
+    [js appendString:@"for (var i = 0; i < headers.length; i++) { header = headers[i];header.remove();  };"];
+//    ""
+    //删除购买
+    [js appendString:@"var top = document.getElementsByClassName('cost-box')[0];"];
+    [js appendString:@"top.parentNode.removeChild(top);"];
+    
+    //删除header
+    [js appendString:@"var bottom = document.getElementsByClassName('buy-now')[0];"];
+    [js appendString:@"bottom.parentNode.removeChild(bottom);"];
+    
+    [webView stringByEvaluatingJavaScriptFromString:js];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

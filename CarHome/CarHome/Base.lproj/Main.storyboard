@@ -25,18 +25,30 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="nD2-cf-GhN"/>
                                 </connections>
                             </tableView>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mu6-qk-Rhn">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="qdi-pJ-NaA"/>
+                                </connections>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="mu6-qk-Rhn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="EI2-mO-3Ku"/>
+                            <constraint firstItem="mu6-qk-Rhn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GPW-uc-Cji"/>
                             <constraint firstItem="CBn-cO-9Hp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="HIW-ce-hNo"/>
                             <constraint firstAttribute="trailing" secondItem="CBn-cO-9Hp" secondAttribute="trailing" id="JyQ-DE-kgE"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mu6-qk-Rhn" secondAttribute="bottom" id="VFC-fw-gQR"/>
                             <constraint firstItem="CBn-cO-9Hp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="XGG-yp-AWy"/>
+                            <constraint firstAttribute="trailing" secondItem="mu6-qk-Rhn" secondAttribute="trailing" id="d6s-6Q-nLP"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="CBn-cO-9Hp" secondAttribute="bottom" id="uPh-bd-8oD"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zZf-5n-jIt"/>
                     <connections>
                         <outlet property="tableView" destination="CBn-cO-9Hp" id="Df4-3t-Pr6"/>
+                        <outlet property="webView" destination="mu6-qk-Rhn" id="UNW-IL-HvN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
